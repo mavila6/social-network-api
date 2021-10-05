@@ -1,9 +1,6 @@
 # Social Network API
-# Budget Tracker
 
 ## Website
-
-
 
 ## Description
 
@@ -21,8 +18,8 @@ A back-end application for a social media startup that creates an API for a soci
 
 ### Built-With
 
-![html](https://img.shields.io/badge/HTML-red.svg)
-![CSS](https://img.shields.io/badge/CSS-blue.svg)
+![NoSQL](https://img.shields.io/badge/NoSQL-red.svg)
+![Nodemon](https://img.shields.io/badge/Nodemon-blue.svg)
 ![Javascript](https://img.shields.io/badge/JavaScript-brightgreen.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-blueviolet.svg)
 ![Express.js](https://img.shields.io/badge/Express.js-ff69b4.svg)
@@ -31,19 +28,17 @@ A back-end application for a social media startup that creates an API for a soci
 
 ### Installation
 
-Clone the repository in the CLI: `git clone https://github.com/mavila6/budget-tracker.git`. To install necessary dependencies, run the following code in the console: `npm i`.
+Clone the repository in the CLI: `git clone https://github.com/mavila6/social-network-api.git`. To install necessary dependencies, run the following code in the console: `npm i`.
 
 ### Usage
 
-Run `npm start` in the command line to initiate the server or `npx nodemon` to start the live server. Go ahead and navigate to localhost port 3001 in your browser to test the application.
+Run `npm start` in the command line to initiate the server or `npx nodemon` to start the live server.
 
 ### Screenshots
 
-![Budget Tracker](./public/images/budget-tracker.png)
+![Insomnia Screenshot](d43d)
 
 ### Acknowledgements
-
-- Used [starter code](https://github.com/coding-boot-camp/symmetrical-bassoon) from [The Coding Bootcamp](https://github.com/coding-boot-camp) GitHub.
 
 - Collaborated with [Kama Castaneda](https://github.com/kamacasta) to complete this challenge.
 
