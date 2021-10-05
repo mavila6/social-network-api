@@ -1,0 +1,28 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A back-end application for a social media startup that creates an API for a social network using a NoSQL database in order to handle large amounts of unstructured data.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavila6/social-network-api.git"
+  },
+  "author": "Marco Avila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavila6/social-network-api/issues"
+  },
+  "homepage": "https://github.com/mavila6/social-network-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
