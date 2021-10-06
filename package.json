@@ -4,7 +4,6 @@
   "description": "A back-end application for a social media startup that creates an API for a social network using a NoSQL database in order to handle large amounts of unstructured data.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "devStart": "nodemon server.js"
   },

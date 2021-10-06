@@ -102,7 +102,33 @@ const userController = {
                 });
         });
     },
-
+    deleteFriend({ params }, res) {
+        User.findOneAndUpdate(
+            { _id: params.userId },
+            { $pull: { freinds: params.id } },
+            { new: true }
+        ).then((data) => {
+            if (!data) {
+                res.status(404).json({ message: "Friend not found" });
+                return;
+            }
+            User.findOneAndUpdate(
+                { _id: params.friendId },
+                { $pull: { friends: params.userId } },
+                { new: true }
+            )
+                .then((data) => {
+                    if (!data) {
+                        res.status(404).json({ message: "No friend with this ID" });
+                    }
+                    res.json(data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                    res.status(500).json(err);
+                });
+        });
+    },
 };
 
 module.exports = userController;

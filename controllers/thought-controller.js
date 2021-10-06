@@ -101,6 +101,24 @@ const thoughtController = {
                 res.status(400).json(err);
             });
     },
+    // oops forgot the creat reaction my app was breaking 
+    createReaction({ params, body }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            { $addToSet: { reactions: body } },
+            { new: true, runValidators: true }
+        )
+            .then((data) => {
+                if (!data) {
+                    res.status(404).json({ message: "No user found with this id" });
+                }
+                res.json(data);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(400).json(err);
+            });
+    },
     // deletes a reaction
     deleteReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
@@ -117,4 +135,3 @@ const thoughtController = {
 };
 
 module.exports = thoughtController;
-
