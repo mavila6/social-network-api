@@ -57,5 +57,64 @@ const thoughtController = {
                 console.log(err);
                 res.status(400).json();
             });
-    }
-}
+    },
+    // update thoughts
+    updateThought({ params, body }, res) {
+        Thought.findOneAndUpdate({ _id: params.id }, body, {
+            new: true,
+            runValidators: true,
+        })
+            .then((data) => {
+                if (!data) {
+                    res.status(404).json({ message: "No thought found" });
+                }
+                res.json(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    },
+    // delete thoughts
+    deleteThought({ params }, res) {
+        Thought.findOneAndDelete({ _id: params.thoughtId })
+            .then((data) => {
+                if (!data) {
+                    return res
+                        .status(404)
+                        .json({ message: "Thought cannot be found" });
+                }
+                return User.findOneAndUpdate(
+                    { _id: params.userId },
+                    { $pull: { thoughts: params.thoughtId } },
+                    { new: true }
+                );
+            })
+            .then((data) => {
+                if (!data) {
+                    res.status(404).json({ message: "User does not exist" });
+                    return;
+                }
+                res.json(true);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(400).json(err);
+            });
+    },
+    // deletes a reaction
+    deleteReaction({ params, body }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            { $pull: { reactions: params.thoughtId } },
+            { new: true }
+        )
+            .then((data) => res.json(data))
+            .catch((err) => {
+                console.log(err);
+                res.status(404).json(err);
+            });
+    },
+};
+
+module.exports = thoughtController;
+
