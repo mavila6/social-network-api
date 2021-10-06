@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-// 
+// schema
 const UserSchema = new Schema({
     username: {
         type: String,
@@ -41,6 +41,6 @@ UserSchema.virtual('friendCount').get(() => {
 UserSchema.virtual('thoughtCount').get(() => {
     return this.thoughts.length;
 });
-// out user schema in variable to be exported
+// put user schema in variable to be exported
 const User = model('User', UserSchema);
 module.exports = User;
