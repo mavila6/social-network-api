@@ -1,7 +1,5 @@
 # Social Network API
 
-## Website
-
 ## Description
 
 A back-end application for a social media startup that creates an API for a social network using a NoSQL database in order to handle large amounts of unstructured data.
@@ -11,7 +9,7 @@ A back-end application for a social media startup that creates an API for a soci
 - [Built With](#built-with)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
+- [Walkthrough Video](#walkthrough-video)
 - [Acknowledgements](#acknowledgements)
 - [Questions](#questions)
 - [Author](#author)
@@ -32,11 +30,11 @@ Clone the repository in the CLI: `git clone https://github.com/mavila6/social-ne
 
 ### Usage
 
-Run `npm start` in the command line to initiate the server or `npx nodemon` to start the live server.
+Run `npm start` in the command line to initiate the server or `npx nodemon` to start the live server. Go ahead and navigate to localhost port 3001 in insomnia to test the application.
 
-### Screenshots
+### Walkthrough-video
 
-![Insomnia Screenshot](d43d)
+![Walkthrough Video](https://watch.screencastify.com/v/1Iyvwhi9QduPWgTlh6ce)
 
 ### Acknowledgements
 
