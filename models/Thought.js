@@ -29,7 +29,7 @@ const ThoughtSchema = new Schema({
     id: false,
 }
 );
-
+//  schema
 const ReactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
